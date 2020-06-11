@@ -10,6 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 
 import net.thucydides.core.annotations.Step;
 
+@SpringBootTest
 public class SerenityStepDef {
 
     @Autowired

@@ -10,7 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
-@SpringBootTest
+//@SpringBootTest
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = {"src/test/resources/features/PetEnquiry.feature"},
