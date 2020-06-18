@@ -2,9 +2,9 @@ package com.sritest.petstoreapi.enums;
 
 public enum PetStatus {
 
-    petstatus_available("available"),
-    petstatus_pending("pending"),
-    petstatus_sold("sold");
+    available("available"),
+    pending("pending"),
+    sold("sold");
 
     private String petStatus;
 

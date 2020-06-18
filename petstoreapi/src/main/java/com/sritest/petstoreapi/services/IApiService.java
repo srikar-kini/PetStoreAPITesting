@@ -3,9 +3,10 @@ package com.sritest.petstoreapi.services;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Component
+import io.restassured.response.Response;
+
 public interface IApiService {
 
-    String get(String endpointUrl);
+    Response get(String endpointUrl);
 
 }

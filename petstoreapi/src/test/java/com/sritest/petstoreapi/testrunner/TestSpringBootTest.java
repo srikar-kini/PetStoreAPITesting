@@ -1,8 +1,9 @@
-package com.sritest.petstoreapi;
+package com.sritest.petstoreapi.testrunner;
 
-import com.sritest.petstoreapi.services.ScenarioContext;
+import com.sritest.petstoreapi.enums.PetStatus;
+import com.sritest.petstoreapi.utilities.PetUtilities;
 
-import org.junit.Rule;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -11,18 +12,24 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import net.serenitybdd.junit.spring.integration.SpringIntegrationMethodRule;
-
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
 @EnableAutoConfiguration(exclude={ DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
-public class AbstractTest {
-
-
-    @Rule
-    public SpringIntegrationMethodRule springMethodIntegration
-            = new SpringIntegrationMethodRule();
+public class TestSpringBootTest {
 
     @Autowired
-    public ScenarioContext scenarioContext;
+    private PetUtilities petUtilities;
+
+    @Test
+    public void runATest(){
+        String endpointUrl = "https://petstore.swagger.io/v2/pet/findByStatus?status=available";
+
+        // int num = petUtilities.getPetsByStatus(PetStatus.petstatus_available,"doggie",endpointUrl);
+        // System.out.println("Pet Nos. : "+num);
+
+
+
+
+    }
+
 }
